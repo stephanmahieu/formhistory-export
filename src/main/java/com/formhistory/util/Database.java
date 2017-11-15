@@ -66,13 +66,13 @@ public final class Database {
         return xstream;
     }
 
-    public static long retrieveInputFields(String profilePath, List<Field> fields) {
+    public static void retrieveInputFields(String profilePath, List<Field> fields) {
         System.out.print("reading inputfields:       ");
 
         final String dbPath = profilePath + File.separator + FIREFOX_DATABASE;
         if (!ExportFileUtil.fileExistAndNotEmpty(dbPath)) {
             System.out.println(" skipped, non existing or empty db (" + FIREFOX_DATABASE + ")");
-            return 0;
+            return;
         }
 
         long count = 0;
@@ -94,16 +94,15 @@ public final class Database {
             System.err.println("Retrieve input fields failed. " + e.getMessage());
         }
         System.out.println(" " + count);
-        return count;
     }
 
-    public static long retrieveMultilineFields(String profilePath, List<EditorField> fields) {
+    public static void retrieveMultilineFields(String profilePath, List<EditorField> fields) {
         System.out.print("reading multilinefields:   ");
 
         final String dbPath = profilePath + File.separator + FHC_DATABASE;
         if (!ExportFileUtil.fileExistAndNotEmpty(dbPath)) {
             System.out.println(" skipped, non existing or empty db (" + FHC_DATABASE + ")");
-            return 0;
+            return;
         }
 
         long count = 0;
@@ -129,7 +128,6 @@ public final class Database {
             System.err.println("Retrieve multiline fields failed. " + e.getMessage());
         }
         System.out.println(" " + count);
-        return count;
     }
 
     private static Statement getStatement(Connection connection) throws SQLException {
