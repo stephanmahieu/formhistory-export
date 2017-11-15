@@ -21,6 +21,8 @@ import java.nio.file.Paths;
 public class App {
     private static final String DEFAULT_OUTPUT_FILE = "formhistory.xml";
 
+    private static final int EXIT_STATUS_FAIL = -1;
+
     public static void main(String[] args) {
         CmdLine cli = new CmdLine(DEFAULT_OUTPUT_FILE, args);
         cli.parse();
@@ -32,17 +34,17 @@ public class App {
         // check output file
         String outputFile = ExportFileUtil.getOutputFilepath(cli.getOutputfile(), DEFAULT_OUTPUT_FILE);
         if (outputFile == null) {
-            System.exit(-1);
+            System.exit(EXIT_STATUS_FAIL);
         }
 
         // check profile directory
         if (!ExportFileUtil.checkProfileDirectory(cli.getProfiledir())) {
-            System.exit(-1);
+            System.exit(EXIT_STATUS_FAIL);
         }
 
         // initialize the SQLite database driver
         if (!Database.initSqliteDriver()) {
-            System.exit(-1);
+            System.exit(EXIT_STATUS_FAIL);
         }
 
         // create object tree to hold the retrieved data
@@ -64,6 +66,7 @@ public class App {
             System.out.println("OK");
         } catch (IOException e) {
             System.err.println("FAILED write error: " + e.getMessage());
+            System.exit(EXIT_STATUS_FAIL);
         }
     }
     
