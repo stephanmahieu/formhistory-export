@@ -7,13 +7,11 @@ import com.formhistory.util.XmlPrettyPrintWriter;
 import com.formhistory.util.Utils;
 import com.thoughtworks.xstream.XStream;
 
-import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
