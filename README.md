@@ -3,7 +3,7 @@
 Standalone Java application for exporting formhistory from Mozilla's (Firefox) SQLite database
 
 ## Requirements
-This application requires a Java runtime of at least version 8.
+This application requires a Java runtime of at least version 1.8.
 You can check if you already have Java installed by executing the following command from the commandline:
 
      java -version
