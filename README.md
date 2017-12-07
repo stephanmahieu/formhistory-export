@@ -62,6 +62,6 @@ The export should still contain the formhistory for all standard text inputfield
 ### Step 2: Import the formhistory xml file:
 
 * open the Form History Control add-on in Firefox (right-click on the Form History Control icon, choose first item)
-* From this dialog, choose File from the Menu on top, then choose Import now an import dialog will open
+* From this dialog, choose File from the Menu on top, then choose Import: an import dialog will open
 * Locate and select the formhistory.xml file you created in the first step
 * Selecting the xml file will enable the Import button, click this button to start the actual Import
