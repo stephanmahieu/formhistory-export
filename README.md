@@ -56,7 +56,7 @@ If everything runs smoothly you should see something like:
 
 You should now have an exportfile named formhistory.xml that you can use to import into the new add-on.
 
-_The step reading multilinefields might fails, this is completely normal if you never used this add-on before.
+_The step reading multilinefields might fail, this is completely normal if you never used this add-on before.
 The export should still contain the formhistory for all standard text inputfields Firefox normally stores in its internal database._
 
 ### Step 2: Import the formhistory xml file:
