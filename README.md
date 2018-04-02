@@ -1,6 +1,6 @@
 # Form History Export
 
-Standalone Java application for exporting formhistory from Mozilla's (Firefox) SQLite database
+Standalone Java application for exporting formhistory from Mozilla's (Firefox) SQLite database.
 
 ## Requirements
 This application requires a Java runtime of at least version 1.8.
@@ -15,7 +15,7 @@ or use the package manager provided by your OS.
 ## Download the export application
 Download the java application fhcExport-1.0.0.jar from here: [fhcExport-1.0.0.jar](https://github.com/stephanmahieu/fhc-home/raw/master/downloads/fhcExport-1.0.0.jar) .
 
-Put this file in any directory you like, then open a dosbox and go to the directory where you downloaded the file.
+Put this file in any directory you like, then open a dosbox or a terminal window and go to the directory where you downloaded the file.
 
 ## Usage
 
